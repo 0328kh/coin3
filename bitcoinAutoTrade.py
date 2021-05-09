@@ -46,7 +46,7 @@ while True:
             print(get_target_price("KRW-BTC", 0.5))
             target_price = get_target_price("KRW-BTC", 0.5)
             current_price = get_current_price("KRW-BTC")
-            if target_price > current_price:
+            if target_price < current_price:
                 krw = get_balance("KRW")
                 if krw > 5000:
                     upbit.buy_market_order("KRW-BTC", krw*0.9995)
